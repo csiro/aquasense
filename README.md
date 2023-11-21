@@ -1,25 +1,38 @@
 ## Overview
 
-Python 3.7 or higher.
+Aquasense is a Python library for communicating with aquatic 
+sensors with simpler drivers for standalone use or for 
+integration with tools such as data loggers.
+
+Support for HydroScat and RAMSES Trios currently exists.
+
+Python 3.7 or higher is required.
 
 ### Installation
+#### Aquasense
 
+    pip install .
+
+#### PyTrios library used by `aquasense`
+    git clone https://github.com/StefanSimis/PyTrios.git
+    cd PyTrios
     pip install .
 
 ### Unit Tests 
 
-Pytest requires `pip install pytest`
+Pytest requires `pip install pytest` and `pip install hypothesis`.
 
-Coverage requires `pip install pytest-cov`
-
-    cd Sensors
     pytest
     pytest -v
+
+Pytest coverage requires `pip install pytest-cov`
+
     pytest --cov
     pytest --cov --cov-report=html:covrep
     pytest --cov --cov-branch --cov-report=html:covrep
 
-Add `--disable-warnings` if necessary, depending upon Python version.
+Add `--disable-warnings` to `pytest` commands if necessary,
+depending upon Python version.
 
 ### Example Runs
 #### HydroScat
