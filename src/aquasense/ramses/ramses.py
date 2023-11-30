@@ -83,8 +83,8 @@ class RAMSES(SensorBase):
 
                     if self.repeats > 0:
                         self.repeats = self.repeats - 1
-                    else:
-                        finished = True
+                    
+                    finished = self.repeats == 0
 
                     time.sleep(self.intra_sample_delay)
 
