@@ -22,7 +22,7 @@ class RAMSES(SensorBase):
                  port: str,
                  integration_time: int = 0,
                  repeats: int = 1,
-                 intra_sample_delay: int = 0,
+                 intra_sample_delay: float = 1,
                  logger: logging.Logger=None,
                  verbose: bool=False):
         

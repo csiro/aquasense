@@ -10,7 +10,7 @@ from aquasense.common.arghelp import less_than_zero_check, usage
 from aquasense.ramses.ramses import RAMSES
 
 
-INTEGRATION_TIMES = [2**i for i in range(3, 14)]
+INTEGRATION_TIMES = [0] + [2**i for i in range(3, 14)]
 
 
 def create_arg_parser() -> argparse.ArgumentParser:
@@ -53,7 +53,7 @@ def create_arg_parser() -> argparse.ArgumentParser:
     
     parser.add_argument("--intra-sample-delay", "-s",
                         dest="intra_sample_delay",
-                        type=int,
+                        type=float,
                         default=1,
                         help="Delay between sampling in secs (default: 1)")
     
@@ -84,7 +84,8 @@ def check_args(parser: argparse.ArgumentParser, args: argparse.Namespace):
         msgs.append("serial port name required")
 
     if args.out_path is not None and \
-        not os.path.exists(os.path.dirname(args.out_path)):
+        os.path.dirname(args.out_path) != "" and \
+            not os.path.exists(os.path.dirname(args.out_path)):
         msgs.append("output file directory does not exist")
 
     if args.integration_time not in INTEGRATION_TIMES:
