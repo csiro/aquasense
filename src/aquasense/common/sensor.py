@@ -2,6 +2,7 @@
 Module for common sensor code.
 """
 
+from abc import abstractmethod
 from typing import List, TextIO
 
 import logging
@@ -37,6 +38,7 @@ class SensorBase(object):
             self.logger.setLevel(logging.INFO)
     
 
+    @abstractmethod
     def run(self):
         """Read samples forever or until some some
            implementation specific end state

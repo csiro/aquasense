@@ -81,8 +81,10 @@ class RAMSES(SensorBase):
                                                         ','.join([str(s) for s in specs[i]])),
                               file=self.out)
 
-                    if self.repeats is not None and self.repeats > 0:
+                    if self.repeats > 0:
                         self.repeats = self.repeats - 1
+                    else:
+                        finished = True
 
                     time.sleep(self.intra_sample_delay)
 

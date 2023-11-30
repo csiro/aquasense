@@ -48,7 +48,7 @@ def create_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--repeats", "-r",
                         dest="repeats",
                         type=int,
-                        default=0,
+                        default=1,
                         help="Number of sampling repeats (default: 1)")
     
     parser.add_argument("--intra-sample-delay", "-s",
