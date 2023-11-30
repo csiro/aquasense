@@ -49,7 +49,6 @@ class RAMSES(SensorBase):
         self.rad_manager = radiometer_manager.TriosManager(port)
 
 
-    # TODO: update List[int] after inspection via PDB
     def single_sample(self) -> Tuple[datetime.datetime, List[int], List[int], List[int]]:
         """Read and return a single sample for each connected device."""
         self.logger.info("Trigger measurement")
