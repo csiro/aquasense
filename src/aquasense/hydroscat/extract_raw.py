@@ -71,11 +71,11 @@ def extract_time(packet: str, start: int, frac_time: bool) -> Tuple[int,
     if frac_time:
         FractionalTime = packet[start+8:start+10] # 2 unsigned bytes
         decimalTime += unsigned8(FractionalTime)/100
-        next_byte = start+10
+        index = start+10
     else:
-        next_byte = start+8
+        index = start+8
 
-    return next_byte, decimalTime
+    return index, decimalTime
 
 
 def extract_from_data_packet(packet: str, num_channels: int) -> Dict[str,Union[int,float]]:
@@ -188,17 +188,17 @@ def extract_from_H_packet(packet: str, num_channels: int) -> Dict[str,int]:
     return fields
 
 
-def checksum(line: str) -> int:
+def checksum(packet: str) -> int:
     """Sum all bytes except the packet flag, preceding the checksum byte,
        returning the value of the least significant byte of the sum.
 
     Args:
-        line: A line corresponding to a raw format packet, NOT ending in CRLF.
+        packet: A string corresponding to a raw format packet, NOT ending in CRLF.
 
     Returns:
         Integer value of the least significant byte of the unsigned sum.
     """
-    return sum([ord(byte) for byte in line[1:-2]]) & 0xFF
+    return sum([ord(byte) for byte in packet[1:-2]]) & 0xFF
     
 
 # Helpers

@@ -39,7 +39,7 @@ class HydroScat(SensorBase):
                  output_cal_header: bool=False,
                  logger: logging.Logger=None,
                  verbose: bool=False):
-        """Configure I/O channel for HydroScat.
+        """Configure initial HydroScat state.
         
         Args:
             cal_path: Path to a HydroScat calibration file.

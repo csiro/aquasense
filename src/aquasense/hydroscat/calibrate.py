@@ -12,11 +12,6 @@ def seconds_since_posix_epoch_to_excel_days(seconds: float) -> float:
     Returns:
         The decimal days since Excel epoch.
     """
-    #from datetime import datetime
-    #hydroscat_epoch = datetime(1900, 1, 1)
-    #posix_epoch = datetime(1970, 1, 1)
-    #delta = posix_epoch - hydroscat_epoch
-    #seconds_since_posix_epoch = datetime.fromtimestamp(seconds)
     seconds_per_day = 86400
     days_since_1970 = seconds/seconds_per_day
     excel_day_1970_01_01 = 25569
