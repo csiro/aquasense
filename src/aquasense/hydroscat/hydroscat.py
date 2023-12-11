@@ -81,9 +81,8 @@ class HydroScat(SensorBase):
 
         self.num_channels = len(self.channel_names())
 
-        # TODO: move to base class
         if serial_mode:
-            self._init_serial()
+            self.init_serial()
             self.exit_str = None
         else:
             self.exit_str = "'End of cast"
@@ -129,12 +128,8 @@ class HydroScat(SensorBase):
         self.in_out.close()
 
 
-    def _init_serial(self):
-        """Issue serial initialisation commands.
-
-        Args:
-            in_out: I/O channel (file, serial port)
-        """    
+    def init_serial(self):
+        """Issue serial initialisation commands."""
         self.consume_available(self.in_out)
         self.date_command()
 

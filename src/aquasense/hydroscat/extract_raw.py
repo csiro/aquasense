@@ -10,8 +10,6 @@ See HydroScat-6P Spectral Backscattering Sensor & Fluorometer
 from typing import Dict, List, Tuple, Union
 import numpy as np
 
-# TODO
-# - improve signed/unsigned function efficiency
 
 def extract_from_raw_line(line: str, num_channels: int) -> List[Union[int,float]]:
     """Extract the numeric fields from the packet in a line.
