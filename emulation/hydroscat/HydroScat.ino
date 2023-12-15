@@ -170,9 +170,6 @@ void read_input() {
 void gen_line() {
   char msg[80];
 
-  // sprintf(msg, "** transmit: %d, state: %d, i: %d\r\n", transmit, state, i);
-  // Serial.print(msg);
-
   if (transmit) {
     Serial.print(data[row]);
     Serial.print(F("\r\n"));
