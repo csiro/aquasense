@@ -219,7 +219,7 @@ class HydroScat(SensorBase):
 
 
     def rawline2dataline(self, line: str) -> str:
-        """"Given a line containing a raw packet, return a line of
+        """Given a line containing a raw packet, return a line of
         calibrated output data.
 
         Args:
