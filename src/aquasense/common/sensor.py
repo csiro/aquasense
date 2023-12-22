@@ -13,7 +13,7 @@ class SensorBase(object):
     A base class for sensors.
 
     Args:
-        in_out: File-like object for I/O (e.g. serial)
+        in_out: File-like object for command-response I/O (e.g. serial)
         out: File-like object to write output to.
         sep: Output column separator; defaults to comma.
         logger: A logger object; defaults to None.
