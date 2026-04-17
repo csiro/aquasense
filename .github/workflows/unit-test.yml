@@ -29,11 +29,4 @@ jobs:
 
     - name: Run tests with coverage
       run: |
-        pytest --cov=src/aquasense --cov-report=term --cov-report=xml --cov-branch
-
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4
-      if: matrix.python-version == '3.12'
-      with:
-        file: ./coverage.xml
-        fail_ci_if_error: false
+        pytest --cov=src/aquasense --cov-report=term --cov-branch
