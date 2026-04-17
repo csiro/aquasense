@@ -16,6 +16,7 @@ build-backend = "hatchling.build"
 name = "aquasense"
 version = "0.0.1"
 dependencies = [
+    "numpy",
     "pyserial>=3.4",
 ]
 
