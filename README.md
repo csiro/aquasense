@@ -1,3 +1,5 @@
+[![Unit Tests](https://github.com/csiro/aquasense/actions/workflows/unit-test.yml/badge.svg)](https://github.com/csiro/aquasense/actions/workflows/unit-test.yml)
+
 ## Overview
 
 Aquasense is a Python library for communicating with aquatic 

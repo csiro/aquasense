@@ -9,12 +9,22 @@
 # - https://realpython.com/python-application-layouts/
 
 [build-system]
-requires = ["hatchling", "pyserial>=3.4"]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
 name = "aquasense"
 version = "0.0.1"
+dependencies = [
+    "numpy",
+    "pyserial>=3.4",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+]
 
 [tool.pytest.ini_options]
 addopts = [
