@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquasense Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        h1 { border-bottom: 2px solid #0366d6; padding-bottom: 10px; }
+        .card {
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .card h2 { margin-top: 0; }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .updated { color: #586069; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <h1>Aquasense Dashboard</h1>
+
+    <div class="card">
+        <h2>Coverage Report</h2>
+        <p>Line and branch coverage from pytest-cov.</p>
+        <p><a href="coverage/">View Coverage Report &rarr;</a></p>
+    </div>
+
+    <div class="card">
+        <h2>More reports coming soon</h2>
+        <p>Static analysis and other reports will be added here.</p>
+    </div>
+
+    <p class="updated">Reports are updated on each merge to master.</p>
+</body>
+</html>
