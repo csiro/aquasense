@@ -15,11 +15,6 @@ Python 3.7 or higher is required.
 
     pip install .
 
-#### PyTrios library used by `aquasense` (optional, only required if `ramses` used)
-    git clone https://github.com/StefanSimis/PyTrios.git
-    cd PyTrios
-    pip install .
-
 ### Unit Tests 
 
 Pytest requires `pip install pytest`
