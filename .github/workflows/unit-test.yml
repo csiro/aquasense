@@ -27,7 +27,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install .[test]
+        # editable install so coverage tracks src/ instead of site-packages
+        pip install -e .[test]
 
     - name: Run tests with coverage
       run: |
