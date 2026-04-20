@@ -43,6 +43,7 @@ jobs:
         git worktree add gh-pages-deploy gh-pages
         rm -rf gh-pages-deploy/coverage
         cp -r coverage-html gh-pages-deploy/coverage
+        rm -f gh-pages-deploy/coverage/.gitignore
         cd gh-pages-deploy
         git add -A
         git diff --cached --quiet && exit 0
